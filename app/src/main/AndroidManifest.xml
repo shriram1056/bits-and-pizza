@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mainactivity">
+    <!--
+            in manifest, the android label wont get used since we are making changes to the activity instead of application
+           but will be used if label is not defined in activity
+           -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".PizzaDetailActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity
+            android:name=".CreateOrderActivity"
+            android:label="@string/create_order"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="Bits and Pizza">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

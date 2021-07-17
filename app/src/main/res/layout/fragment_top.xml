@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/info_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/restaurant"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/restaurant_image"/>
+
+        <!-- Scale the image uniformly (maintain the image’s aspect ratio) so that both dimensions (width and height) of
+        the image will be equal to or larger than the corresponding dimension of the view (minus padding). to see
+        this in effect remove it and use layout validation-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="16dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+            <!-- there are 6 f,if you miss a single character that is not a
+            resource you will get android resource linking error -->
+
+            <TextView
+                android:textSize="32sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/company_name" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_text"/>
+
+        </LinearLayout>
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>
